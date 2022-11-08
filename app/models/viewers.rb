@@ -1,3 +1,3 @@
-class Viewer < ActiveRecord::Base
+class CreateViewer < ActiveRecord::Base
 
 end
