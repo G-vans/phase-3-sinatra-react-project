@@ -38,4 +38,11 @@ post "/movie" do
   new_movie.to_json
 end
 
+##delete a movie
+delete '/movie/:id' do
+  movie = Movie.find(params[:id])
+  movie.destroy
+  movie.to_json
+end
+
 end
