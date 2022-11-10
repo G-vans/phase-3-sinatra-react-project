@@ -26,4 +26,16 @@ get '/movie/:id' do
   Movie.find(params[:id]).to_json
 end
 
+#post movie
+post "/movie" do
+  new_movie = Movie.create(
+    image_url: params[:image_url],
+    name: params[:name],
+    rating: params[:rating],
+    overview: params[:overview]
+
+  )
+  new_movie.to_json
+end
+
 end
