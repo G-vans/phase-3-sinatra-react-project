@@ -50,6 +50,11 @@ get '/watchlists' do
   Watchlist.all.to_json
 end
 
+##get a single watchlist
+get '/watchlist/:id' do
+  Watchlist.find(params[:id]).to_json
+end
+
 ##post a watchlist
 post "/watchlist" do
   new_watchlist = Watchlist.create(
