@@ -45,4 +45,9 @@ delete '/movie/:id' do
   movie.to_json
 end
 
+##get watchlists
+get '/watchlists' do
+  Watchlist.all.to_json
+end
+
 end
