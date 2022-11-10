@@ -21,4 +21,9 @@ end
     Movie.all.to_json
 end
 
+# get one movie
+get '/movie/:id' do
+  Movie.find(params[:id]).to_json
+end
+
 end
