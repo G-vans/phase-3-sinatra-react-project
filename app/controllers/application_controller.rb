@@ -50,4 +50,16 @@ get '/watchlists' do
   Watchlist.all.to_json
 end
 
+##post a watchlist
+post "/watchlist" do
+  new_watchlist = Watchlist.create(
+    image_url: params[:image_url],
+    name: params[:name],
+    viewer_id: params[:viewer_id],
+    movie_id: params[:movie_id]
+
+  )
+  new_watchlist.to_json
+end
+
 end
