@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 2022_11_10_173730) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.string "comments"
+  end
+
   create_table "viewers", force: :cascade do |t|
     t.string "name"
   end
