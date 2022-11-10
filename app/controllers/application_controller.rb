@@ -16,4 +16,9 @@ end
     { message: "Good luck with your project!" }.to_json
   end
 
+  # get all movies
+  get '/movies' do
+    Movie.all.to_json
+end
+
 end
