@@ -62,4 +62,11 @@ post "/watchlist" do
   new_watchlist.to_json
 end
 
+##delete a watchlist
+delete '/watchlist/:id' do
+  watchlist = Watchlist.find(params[:id])
+  watchlist.destroy
+  watchlist.to_json
+end
+
 end
